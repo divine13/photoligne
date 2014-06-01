@@ -1,0 +1,25 @@
+<div id="contents">
+<h2>Latest Pictures In Gallery</h2>
+  <h2 class="rig">
+   <%= link_to 'Create Gallery Folder', new_gallery_path if signed_in?%>
+  </h2>
+<div class="sidebar">
+<% @galleries.each do |g| %>
+
+
+    <pre><h2><%= link_to g.name, gallery_gposts_path(g) %></h2>
+   Made: <%= time_ago_in_words(g.created_at) %> ago</pre>
+    <%# photo_for(g) %>
+
+<% end %>
+</div>
+<div class="main">
+  <ul class="news">
+  <% @gposts.each do |gp| %>
+     <div class="thum"> <%= link_to photo_for(gp), gallery_gposts_path(gp.gallery) %>
+     </div>
+
+  <% end %>
+  </ul>
+</div>
+</div>

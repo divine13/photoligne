@@ -1,0 +1,24 @@
+<% name = @port.name%>
+<%= provide(:title, "| #{name}") %>
+<div class="main">
+  <div class="image ">
+<%= name.capitalize! %> Photos and Videos
+<%= link_to "Add New Photos and Video to #{name}", new_portfolio_posts_path if signed_in? %>
+
+
+
+
+<% @all_posts.each do |p| %>
+
+    <%= photo_for(p) %>
+        <p>
+    <%= video_for(p) %>
+        </p>
+     <p class="lim">
+       Info: <%= p.name %>
+     </p>
+     <%# link_to("delete", [@port,p.destroy], remote: true,  method: :delete) %>
+<% end %>
+ </div>
+</div>
+

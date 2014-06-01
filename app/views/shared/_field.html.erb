@@ -1,0 +1,11 @@
+<%# number = 0 %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :photo, "Picture" %>
+<%= f.file_field :photo  %>
+<%= f.label :image, "Video" %>
+<%= f.file_field :image %>
+<%# f.fields_for :assets do |asset| %>
+    <%# asset.label :asset, "Video or Picture ##{number += 1} "%>
+    <%# asset.file_field :asset  %>
+<%# end %>

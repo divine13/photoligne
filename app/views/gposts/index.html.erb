@@ -1,0 +1,11 @@
+<span>
+<h2><%= "#{@gallery.name.capitalize}" %> Gallery</h2>
+<span class="right"><%= link_to "Add Picture or Video to Gallery",new_gallery_gposts_path(@gallery) %></span>
+</span>
+<% @gposts.each do |gp|  %>
+    <div>
+   <span class="image "> <%= photo_for(gp) %></span>
+    <span class="video"><%= video_for(gp) %></span>
+    <p class="lim"><%= gp.name %></p>
+    </div>
+<% end %>

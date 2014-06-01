@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="span5 offset4">
+<%= form_for(@gallery) do |f| %>
+        <%= f.label :name  %>
+        <%= f.text_field :name %>
+
+        <%= f.label :desc, "More Info About This Folder" %>
+        <%= f.text_field :desc %>
+   <%#render 'shared/field', f:f %>
+    <%= f.submit  "Create Gallery Folder" %>
+<% end %>
+      </div>
+    </div>

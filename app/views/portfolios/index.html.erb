@@ -1,0 +1,14 @@
+
+<h1>Our Services</h1>
+ <p >
+<% @ports.each do |port| %>
+
+    <div class="data">
+<h1><%= link_to(port.name, portfolio_posts_path(port)) %></h1>
+
+<%= port.desc %>
+    </div>
+<%# port.nopic  %>
+    </p>
+<% end %>
+

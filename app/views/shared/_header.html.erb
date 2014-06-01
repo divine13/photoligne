@@ -1,0 +1,22 @@
+<div id="header">
+  <h1 class="cen">
+  <%= link_to("PhotoLigne", root_path) %>
+  </h1>
+    <div class="cenli">
+      <li>
+        <%= link_to("Home", root_path)  %>
+        <%= link_to("Services", portfolios_path)  %>
+        <%= link_to("Gallery", galleries_path) %>
+      <%= link_to("Contact Us", static_pages_contact_path) %>
+
+<% if(user_signed_in?)  %>
+    <%= current_user.email %>
+    <%= link_to("Sign Out", destroy_user_session_path, method: :delete)  %>
+<% else %>
+    <%= link_to("Sign in", new_user_session_path)  %>
+<% end %>
+      </li>
+    </div>
+</div>
+
+
