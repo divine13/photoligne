@@ -7,7 +7,7 @@ gem 'bootstrap-sass'
 gem 'bootstrap-will_paginate'
 
 gem 'devise'
-gem 'paperclip'
+gem 'paperclip-dropbox'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
